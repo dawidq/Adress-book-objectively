@@ -25,7 +25,7 @@ bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         }
         else
         {
-            plikTekstowy <<endl<<liniaZDanymiAdresata ;
+            plikTekstowy << endl <<liniaZDanymiAdresata ;
         }
         idOstatniegoAdresata++;
         plikTekstowy.close();

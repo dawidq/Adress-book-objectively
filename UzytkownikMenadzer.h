@@ -37,6 +37,7 @@ public:
     void wylogowanieUzytkownika();
     bool czyUzytkownikJestZalogowany();
     int pobierzIdZalogowanegoUzytkownika();
+    vector<Uzytkownik> pobierzWektor();
 
 };
 #endif

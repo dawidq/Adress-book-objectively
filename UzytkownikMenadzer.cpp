@@ -135,3 +135,7 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
     }
 
 }
+vector<Uzytkownik> UzytkownikMenadzer::pobierzWektor()
+{
+    return uzytkownicy;
+}

@@ -96,18 +96,17 @@ Uzytkownik PlikZuzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
     }
     return uzytkownik;
 }
-void PlikZuzytkownikami::zapiszWszystkichUzytkownikowDoPliku()
+void PlikZuzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector<Uzytkownik> uzytkownicy)
  {
-UzytkownikMenadzer uzytkownikMenadzer;
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
-    vector <Uzytkownik>::iterator itrKoniec = --uzytkownikMenadzer.pobierzWektor().end();
+    vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
 
     plikTekstowy.open(NAZWA_PLIKU_Z_UZYTKOWNIKAMI.c_str(), ios::out);
 
     if (plikTekstowy.good() == true)
     {
-        for (vector <Uzytkownik>::iterator itr = uzytkownikMenadzer.pobierzWektor().begin(); itr != uzytkownikMenadzer.pobierzWektor().end(); itr++)
+        for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
         {
             liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(*itr);
 

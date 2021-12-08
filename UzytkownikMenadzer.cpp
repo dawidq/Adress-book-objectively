@@ -123,19 +123,16 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
     cout << "Podaj nowe haslo: ";
     noweHaslo = MetodyPomocnicze::wczytajLinie();
 
+
     for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
     {
         if (itr -> pobierzId() == idZalogowanegoUzytkownika)
         {
-            itr -> pobierzHaslo() = noweHaslo;
+            itr -> ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
-            plikZuzytkownikami.zapiszWszystkichUzytkownikowDoPliku();
+            plikZuzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
             system("pause");
         }
     }
 
-}
-vector<Uzytkownik> UzytkownikMenadzer::pobierzWektor()
-{
-    return uzytkownicy;
 }

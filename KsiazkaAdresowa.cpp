@@ -47,6 +47,35 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
         adresatMenadzer->wyswietlWszystkichAdresatow();
     }
 }
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    if(uzytkownikMenadzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenadzer->wyszukajAdresatowPoImieniu();
+    }
+}
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    if(uzytkownikMenadzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenadzer->wyszukajAdresatowPoNazwisku();
+    }
+}
+void KsiazkaAdresowa::usunAdresata()
+{
+    if(uzytkownikMenadzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenadzer->usunAdresata();
+    }
+}
+void KsiazkaAdresowa::edytujAdresata()
+{
+    if(uzytkownikMenadzer.czyUzytkownikJestZalogowany())
+    {
+        adresatMenadzer->edytujAdresata();
+    }
+}
+
 int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 {
     return uzytkownikMenadzer.pobierzIdZalogowanegoUzytkownika();

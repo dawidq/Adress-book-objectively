@@ -31,6 +31,13 @@ AdresatMenadzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
 
 void dodajAdresata();
 void wyswietlWszystkichAdresatow();
+void wyszukajAdresatowPoImieniu();
+void wyszukajAdresatowPoNazwisku();
+void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+int usunAdresata();
+int podajIdWybranegoAdresata();
+void edytujAdresata();
+char wybierzOpcjeZMenuEdycja();
 
 };
 #endif
